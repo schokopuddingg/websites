@@ -1,0 +1,168 @@
+/* Grundlayout */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+/* Haupt-Wrapper */
+.container {
+    display: flex;
+    flex: 1; /* füllt gesamte Höhe */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: rgba(0, 0, 0, 0.85);
+    border-right: 4px solid red;
+    padding: 2rem 1rem;
+    color: red;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-pic {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    color: white;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar ul a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.sidebar ul a:hover {
+    color: red;
+}
+
+.sidebar-other {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+.sidebar-other h4 {
+    margin: 0 0 0.5rem 0;
+    color: red;
+    font-size: 1.1rem;
+}
+
+.sidebar-other a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0.2rem 0;
+    transition: color 0.2s;
+}
+
+.sidebar-other a:hover {
+    color: red;
+}
+
+/* Content-Bereich */
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #b00020;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+nav a:hover {
+    background-color: red;
+    color: #fff;
+}
+
+/* Main wächst und drückt Footer nach unten */
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+/* Überschriften */
+h2,
+h3,
+h4,
+h5 {
+    color: black;
+}
+
+/* Tabellen */
+table,
+th,
+td {
+    border: 1px solid #ffd1dc;
+    border-spacing: 2px;
+    color: #00ffef;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+}
+
+/* Footer bleibt immer unten */
+footer {
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
