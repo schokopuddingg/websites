@@ -59,6 +59,10 @@ pre {
     color: #00ffff;
 }
 
+.yellow {
+    color: yellow;
+}
+
 #command {
     position: absolute;
     left: 120px;
