@@ -9,7 +9,7 @@ body {
 
 body {
     font-family: Consolas, "Lucida Console", "Courier New", monospace;
-    font-size: 28px;
+    /*font-size: 1.5vw;*/
     font-weight: bold;
     color: #00ff00;
     overflow: hidden;
@@ -20,30 +20,35 @@ body {
 
 #viewport {
     aspect-ratio: 16 / 10;
-    width: min(100vw, calc(100vh * 16 / 10));
-    height: min(100vh, calc(100vw * 10 / 16));
+    width: var(--viewport-width);
+    height: var(--viewport-height);
+    font-size: calc((var(--viewport-width) / 100) * 1.7);
     background: black;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 0 30px black;
-    border-radius: 8px;
+    box-shadow: 0 0 calc((var(--viewport-width) / 100) * 1.5) black;
+    border-radius: calc((var(--viewport-width) / 100) * 0.3);
+    --viewport-height: min(100vh, calc(100vw * 10 / 16));
+    --viewport-width: min(100vw, calc(100vh * 16 / 10));
+}
 
 #terminal {
-        position: absolute;
-        inset: 0;
-        /*padding: 15px;*/
-        box-sizing: border-box;
-        background: #000;
+    position: absolute;
+    inset: 0;
+    /*padding: 15px;*/
+    box-sizing: border-box;
+    background: #000;
 
-        display: flex;
-        flex-direction: column;
-    }
+    display: flex;
+    flex-direction: column;
+}
 
 #topbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 50px;
+    padding: calc((var(--viewport-width) / 100) * 3)
+        calc((var(--viewport-width) / 100) * 3);
     color: white;
 }
 
@@ -67,12 +72,12 @@ body {
 #content {
     flex: 1;
     overflow-y: auto;
-    padding-left: 40px;
+    padding-left: calc((var(--viewport-width) / 100) * 3);
     /*white-space: pre-wrap;*/
 }
 
 .text {
-    padding-left: 80px;
+    padding-left: calc((var(--viewport-width) / 100) * 6);
     line-height: 1.5;
 }
 
@@ -81,8 +86,8 @@ body {
 }
 
 #prompt {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: calc((var(--viewport-width) / 100) * 3.5);
+    padding-right: calc((var(--viewport-width) / 100) * 3.5);
 }
 
 pre {
@@ -113,13 +118,13 @@ pre {
 }
 
 #command {
-    width: calc(100% - 120px);
+    width: calc((var(--viewport-width) / 100) * 75);
     background: transparent;
     border: none;
-    border-bottom: 2px solid #00ff00;
+    border-bottom: calc((var(--viewport-width) / 100) * 0.1) solid #00ff00;
     color: yellow;
     outline: none;
-    font-size: 28px;
+    font-size: calc((var(--viewport-width) / 100) * 1.7);
     font-family: inherit;
     font-weight: bold;
 }
@@ -140,32 +145,33 @@ pre {
 }
 
 .line {
-    height: 2px;
+    height: calc((var(--viewport-width) / 100) * 0.1);
     background: #00ff00;
-    margin: 25px 0px 10px 0px;
+    margin: calc((var(--viewport-width) / 100) * 1) 0px
+        calc((var(--viewport-width) / 100) * 0.5) 0px;
 }
 
 .lineblue {
-    height: 2px;
+    height: calc((var(--viewport-width) / 100) * 0.1);
     background: #5b8dff;
-    margin-top: 10px;
+    margin-top: calc((var(--viewport-width) / 100) * 0.5);
 }
 
 #keys {
     color: #5b8dff;
     line-height: 1.35;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: calc((var(--viewport-width) / 100) * 1);
+    padding-right: calc((var(--viewport-width) / 100) * 1);
 }
 
-#keys span{
-    margin-right:10px;
+#keys span {
+    margin-right: calc((var(--viewport-width) / 100) * 0.5);
 }
 
-.key{
-    background:#bdbdbd;
-    color:#000;
-    padding:0 3px;
+.key {
+    background: #bdbdbd;
+    color: #000;
+    padding: 0 calc((var(--viewport-width) / 100) * 0.1);
 }
 
 .key-link {
@@ -189,7 +195,10 @@ pre {
 #status {
     display: flex;
     justify-content: space-between;
-    padding: 10px 200px 10px 20px;
+    padding: calc((var(--viewport-width) / 100) * 0.5)
+        calc((var(--viewport-width) / 100) * 10)
+        calc((var(--viewport-width) / 100) * 0.5)
+        calc((var(--viewport-width) / 100) * 1);
 }
 
 .center {
