@@ -29,11 +29,59 @@ body {
     border-radius: 8px;
 
 #terminal {
-    position: absolute;
-    inset: 0;
-    padding: 44px;
-    box-sizing: border-box;
-    background: #000;
+        position: absolute;
+        inset: 0;
+        /*padding: 15px;*/
+        box-sizing: border-box;
+        background: #000;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+#topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 50px;
+    color: white;
+}
+
+#topbar .blue {
+    color: #5b8dff;
+    font-weight: bold;
+}
+
+#topbar .white {
+    flex: 1;
+    text-align: center;
+    color: white;
+}
+
+#topbar .green {
+    color: #00ff00;
+    font-weight: bold;
+    text-align: right;
+}
+
+#content {
+    flex: 1;
+    overflow-y: auto;
+    padding-left: 50px;
+    /*white-space: pre-wrap;*/
+}
+
+.text {
+    padding-left: 100px;
+}
+
+#footer {
+    flex-shrink: 0;
+}
+
+#prompt {
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 pre {
@@ -64,10 +112,7 @@ pre {
 }
 
 #command {
-    position: absolute;
-    left: 120px;
-    top: 740px;
-    width: 1180px;
+    width: calc(100% - 120px);
     background: transparent;
     border: none;
     border-bottom: 2px solid #00ff00;
@@ -76,7 +121,6 @@ pre {
     font-size: 28px;
     font-family: inherit;
     font-weight: bold;
-    caret-color: #00ff00;
 }
 
 .menu-link {
@@ -95,29 +139,22 @@ pre {
 }
 
 .line {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 200px;
     height: 2px;
     background: #00ff00;
+    margin: 25px 0px 10px 0px;
 }
 
 .lineblue {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 54px;
     height: 2px;
     background: #5b8dff;
+    margin-top: 10px;
 }
 
-#keys{
-    position:absolute;
-    left:18px;
-    bottom:67px;
-    color:#5b8dff;
-    line-height:1.35;
+#keys {
+    color: #5b8dff;
+    line-height: 1.35;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #keys span{
@@ -146,23 +183,17 @@ pre {
 
 #copyright {
     color: white;
-    margin-top: 6px;
 }
 
 #status {
-    position: absolute;
-    left: 35px;
-    right: 35px;
-    bottom: 8px;
-    color: #00ff00;
     display: flex;
     justify-content: space-between;
+    padding: 10px 200px 10px 20px;
 }
 
 .center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
+    transform: none;
 }
 
 #command {
