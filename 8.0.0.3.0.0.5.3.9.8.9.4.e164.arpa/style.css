@@ -118,6 +118,11 @@ body {
 
 .link {
     color: var(--green);
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
 }
 
 .status {
