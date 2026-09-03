@@ -116,6 +116,10 @@ body {
     word-break: break-all;
 }
 
+.link {
+    color: var(--green);
+}
+
 .status {
     color: var(--green);
 }
