@@ -1,0 +1,159 @@
+:root {
+    --bg: #000;
+    --blue: #0055aa;
+    --bright-blue: #00aaff;
+    --cyan: #00ffff;
+    --white: #ffffff;
+    --yellow: #ffff00;
+    --green: #00ff00;
+    --red: #ff3333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--bg);
+    color: var(--white);
+    font-family: "Courier New", Courier, monospace;
+}
+
+body {
+    padding: 24px;
+}
+
+.terminal {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 3px solid var(--blue);
+    background: #000;
+    box-shadow:
+        0 0 0 2px #001f3f,
+        0 0 25px rgba(0, 170, 255, 0.15);
+}
+
+.header {
+    background: var(--blue);
+    color: var(--white);
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.header .page {
+    color: var(--yellow);
+}
+
+.content {
+    padding: 20px;
+}
+
+.title {
+    color: var(--cyan);
+    text-align: center;
+    font-size: clamp(20px, 4vw, 32px);
+    margin: 5px 0 8px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    color: var(--yellow);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.line {
+    color: var(--bright-blue);
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 8px 0;
+}
+
+.box {
+    border: 2px solid var(--bright-blue);
+    padding: 15px;
+    margin: 18px 0;
+}
+
+.box-title {
+    color: var(--yellow);
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    color: var(--white);
+    text-decoration: none;
+    background: #001a33;
+    border: 1px solid var(--blue);
+}
+
+.menu a:hover {
+    background: var(--blue);
+    color: var(--yellow);
+}
+
+.number {
+    color: var(--yellow);
+    margin-right: 8px;
+}
+
+.enum {
+    color: var(--green);
+    word-break: break-all;
+}
+
+.status {
+    color: var(--green);
+}
+
+.footer {
+    border-top: 2px solid var(--blue);
+    padding: 10px 15px;
+    color: #777;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cursor {
+    color: var(--green);
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 8px;
+    }
+
+    .content {
+        padding: 12px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}
