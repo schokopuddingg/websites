@@ -106,6 +106,24 @@ body {
     color: var(--yellow);
 }
 
+.menuwide {
+    gap: 8px;
+}
+
+.menuwide a {
+    display: block;
+    padding: 10px;
+    color: var(--white);
+    text-decoration: none;
+    background: #001a33;
+    border: 1px solid var(--blue);
+}
+
+.menuwide a:hover {
+    background: var(--blue);
+    color: var(--yellow);
+}
+
 .number {
     color: var(--yellow);
     margin-right: 8px;
