@@ -107,10 +107,12 @@ body {
 }
 
 .menuwide {
+    display: grid;
     gap: 8px;
 }
 
-.menuwide a {
+.menuwide a:link,
+.menuwide a:visited {
     display: block;
     padding: 10px;
     color: var(--white);
@@ -119,9 +121,11 @@ body {
     border: 1px solid var(--blue);
 }
 
-.menuwide a:hover {
+.menuwide a:hover,
+.menuwide a:active {
     background: var(--blue);
     color: var(--yellow);
+    text-decoration: none;
 }
 
 .number {
