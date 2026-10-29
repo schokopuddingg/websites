@@ -75,7 +75,7 @@ body {
 }
 
 .box {
-    border: 2px solid var(--bright-blue);
+    border: 0px solid var(--bright-blue);
     padding: 15px;
     margin: 18px 0;
 }
@@ -129,7 +129,7 @@ body {
 }
 
 .number {
-    color: var(--yellow);
+    color: var(--red);
     margin-right: 8px;
 }
 
@@ -148,7 +148,7 @@ body {
 }
 
 .button-panel {
-    border: 2px solid var(--bright-blue);
+    border: 0px solid var(--bright-blue);
     background: #001a33;
     padding: 12px;
 }

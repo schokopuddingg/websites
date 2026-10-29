@@ -53,10 +53,13 @@
                     </div>
                 </div>
                 <div id="footer">
-                    <div id="prompt">
-                        <span class="green">Selection or command</span><br />
-                        ===> <input id="command" type="text" />
-                    </div>
+                    <form id="prompt" action="" method="get">
+                      <div>
+                        <label for="name">Your Selection: </label>
+                        <input type="text" name="prompt" id="command" required />
+                      </div>
+                    </form>
+
                     <div class="line"></div>
                     <div id="keys">
                         <a href="index.html" class="key-link">
