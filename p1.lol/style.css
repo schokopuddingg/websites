@@ -69,6 +69,19 @@ body {
     text-align: right;
 }
 
+#offmsg {
+    color: #DC812D;
+    font-weight: bold;
+    font-size: 250%;
+    text-align: center;
+    padding: calc((var(--viewport-width) / 100) * 25) 0
+        calc((var(--viewport-width) / 100) * 25) 0;
+        margin: calc((var(--viewport-width) / 100) * 0) /*top*/
+            calc((var(--viewport-width) / 100) * 15) /*right*/
+            calc((var(--viewport-width) / 100) * 0) /*bottom*/
+            calc((var(--viewport-width) / 100) * 15); /*left*/
+}
+
 #content {
     flex: 1;
     overflow-y: auto;
